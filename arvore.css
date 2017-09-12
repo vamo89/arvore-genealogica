@@ -1,0 +1,203 @@
+/* Geral */
+
+body {
+	background: url("fotos/bg.png") no-repeat;
+	background-size: 810px 800px;
+	height: 800px;
+	width: 810px;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+	margin: auto;
+	width: 80%;
+
+    margin-left: 10%;
+    display: table;
+    table-layout: fixed;
+    margin-top: 20px;
+}
+
+#childrenblock {
+	width: 90%;
+    margin-left: 4%;
+}
+
+.name {
+	color: white;
+	text-align: center;
+	
+	background-color:rgba(0,0,0,0.2);
+    border-radius: 6px;
+    width: 100%;
+    padding: 0px 5px;
+}
+
+.msg {
+	color: white;
+	text-align: right;
+	font-family: cursive;
+	position: absolute;
+	right: 1050px;
+	top: 15px;
+}
+
+.backbutton {
+	height: 40px;
+    float: left;
+}
+
+/* Star */
+
+.starblock {
+    background: url("fotos/star.png") no-repeat;
+    background-size: 100px;
+    background-position: 86px 28px;
+    height: 150px;
+    margin-top: 130px;
+}
+
+.star {
+	display: inline-block;
+}
+
+.star .name {
+	display: initial;
+	background-color:rgba(0,0,0,0.1);
+}
+
+.star img {
+    height: 100px;
+}
+
+/* Familia */
+
+.familia {
+	vertical-align: top;
+    display: table-cell;
+	text-align: center;
+}
+
+/* Filho */
+
+.familia .filho {
+    height: 130px;
+    z-index: 100;
+    position: relative;
+}
+
+.familia .filho img {
+    height: 70px;
+}
+
+/* Neto */
+
+.familia .neto img {
+    height: 40px;
+}
+
+/* Grow */
+
+.familia:not(.bigfamily) .filho,
+.backbutton {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.backbutton:hover,
+.backbutton:focus,
+.backbutton:active,
+.familia:not(.bigfamily) .filho:hover,
+.familia:not(.bigfamily) .filho:focus,
+.familia:not(.bigfamily) .filho:active {
+    transform: scale(1.5);
+    z-index: 101;
+}
+
+/* Hide */
+
+.familia:not(.bigfamily) .insidemsg,
+.hide {
+	display: none !important;
+}
+
+/* Actions - bigfamily */
+
+.bigfamily {
+	text-align: left;
+    padding-left: 70px;
+}
+
+.bigfamily .filho {
+    height: 180px;
+    display: inline-block;
+}
+
+.bigfamily .filho .portrait {
+	display: inline-block;
+}
+
+.bigfamily .filho img {
+	height: 170px;
+}
+
+.bigfamily .neto {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.bigfamily .neto img {
+	height: 80px;
+}
+
+.bigfamily .insidemsg {
+	color:white;
+	text-align: right;
+	float: right;
+	font-family: cursive;
+
+	background-color:rgba(0,0,0,0.6);
+    border-radius: 6px;
+    padding: 15px;
+
+    width: 700px;
+    max-height: 230px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+/* Scroll */
+
+.insidemsg::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+.insidemsg::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.insidemsg::-webkit-scrollbar-thumb
+{
+	background-color: #3366FF;
+	border-radius: 10px;
+	background-image: -webkit-linear-gradient(0deg,
+	                                          rgba(255, 255, 255, 0.5) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, 0.5) 50%,
+											  rgba(255, 255, 255, 0.5) 75%,
+											  transparent 75%,
+											  transparent)
+}
